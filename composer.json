@@ -1,23 +1,25 @@
 {
-    "name": "gmf/simple-discussion",
-    "type": "typo3-cms-extension",
-    "description": "Simple discussion system ",
-    "authors": [
-        {
-            "name": "Team GMF",
-            "role": "Developer"
-        }
-    ],
-    "require": {
-        "typo3/cms-core": "^10.4"
-    },
-    "autoload": {
-        "psr-4": {
-            "Gmf\\SimpleDiscussion\\": "Classes"
-        }
-    },
-    "replace": {
-        "gmf/simple-discussion": "self.version",
-        "typo3-ter/simple-discussion": "self.version"
-    }
+	"name": "gmf/simple-discussion",
+	"type": "typo3-cms-extension",
+	"description": "Simple discussion system ",
+	"authors": [
+		{
+			"name": "Team GMF",
+			"role": "Developer",
+			"email": "teamonline@gmf-design.de",
+			"homepage": "https://gmf-design.de"
+		}
+	],
+	"require": {
+		"typo3/cms-core": "^10.4"
+	},
+	"autoload": {
+		"psr-4": {
+			"Gmf\\SimpleDiscussion\\": "Classes"
+		}
+	},
+	"replace": {
+		"gmf/simple-discussion": "self.version",
+		"typo3-ter/simple-discussion": "self.version"
+	}
 }
