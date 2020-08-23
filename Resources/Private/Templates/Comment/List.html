@@ -1,0 +1,82 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+    <f:layout name="Default" />
+
+    <f:section name="content">
+        <f:render partial="FlashMessages" />
+
+        <h3 class="comment-title" id="comments">
+            <f:translate key="tx_simplediscussion_domain_model_comment.title" />
+        </h3>
+
+        <div class="comment-create">
+            <a class="btn btn-primary" data-toggle="collapse" href="#collapseCommentForm{data.uid}" role="button" aria-expanded="true" aria-controls="collapseExample">
+                <f:translate key="tx_simplediscussion_domain_model_comment.writecomment" />
+            </a>
+            <div class="collapse" id="collapseCommentForm{data.uid}">
+                <div class="well mt-3">
+                    <f:render partial="FormNew" arguments="{_all}" />
+                </div>
+            </div>
+        </div>
+
+        <f:if condition="{comments}">
+            <f:then>
+                <ul class="list-group list-group-flush">
+                    <f:render section="comments" arguments="{comments: comments, allowReply: allowReply, padding: 0}" />
+                </ul>
+            </f:then>
+            <f:else>
+                <p>
+                    <f:translate key="tx_simplediscussion_domain_model_comment.nothingfound" />
+                </p>
+            </f:else>
+        </f:if>
+    </f:section>
+
+    <f:section name="comments">
+        <f:for each="{comments}" as="comment">
+            <f:if condition="{comment.children}">
+                <f:then>
+                    <li class="list-group-item pl-{padding} pb-0">
+                        <f:render section="item" arguments="{comment: comment.comment, allowReply: allowReply}" />
+                        <ul class="list-group list-group-flush">
+                            <f:render section="comments" arguments="{comments: comment.children, allowReply: allowReply, padding: 3}" />
+                        </ul>
+                    </li>
+                </f:then>
+                <f:else>
+                    <li class="list-group-item pl-{padding} pb-3">
+                        <f:render section="item" arguments="{comment: comment.comment, allowReply: allowReply}" />
+                    </li>
+                </f:else>
+            </f:if>
+        </f:for>
+    </f:section>
+
+    <f:section name="item">
+        <div class="comment-header">
+            {comment.crdate -> f:format.date(format:'d.m.Y')}
+            <f:if condition="{comment.name}">
+                <f:then>
+                <f:if condition="{comment.email}"><a href="mailto:{comment.email}"></f:if>
+                    | {comment.name}
+                <f:if condition="{comment.email}"></a></f:if>
+                </f:then>
+                <f:else>
+                    | <f:translate key="tx_simplediscussion_domain_model_comment.anonymous" />
+                </f:else>
+            </f:if>
+        </div>
+        <div class="comment-body">
+            <blockquote class="ml-1">{comment.comment}</blockquote>
+        </div>
+        <f:if condition="{allowReply}">
+            <div class="comment-footer">
+                <f:link.action action="edit" arguments="{instruction: 'edit', comment : comment}">
+                    <f:translate key="tx_simplediscussion_domain_model_comment.replycomment" />
+                </f:link.action>
+            </div>
+        </f:if>
+    </f:section>
+
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:simple_discussion/Resources/Private/Language/locallang_csh" date="2020-08-17T17:41:52Z" product-name="simple_discussion">
+		<header/>
+		<body>
+			<trans-unit id="name.description" resname="name.description">
+				<source>name</source>
+			</trans-unit>
+			<trans-unit id="email.description" resname="email.description">
+				<source>email</source>
+			</trans-unit>
+			<trans-unit id="comment.description" resname="comment.description">
+				<source>comment</source>
+			</trans-unit>
+			<trans-unit id="reference.description" resname="reference.description">
+				<source>reference</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

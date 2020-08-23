@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:simple_discussion/Resources/Private/Language/locallang_db" date="2020-08-17T17:41:52Z" product-name="simple_discussion">
+		<header/>
+		<body>
+			<trans-unit id="tx_simplediscussion_domain_model_comment" resname="tx_simplediscussion_domain_model_comment">
+				<source>Comment</source>
+			</trans-unit>
+			<trans-unit id="tx_simplediscussion_domain_model_comment.name" resname="tx_simplediscussion_domain_model_comment.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_simplediscussion_domain_model_comment.email" resname="tx_simplediscussion_domain_model_comment.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_simplediscussion_domain_model_comment.comment" resname="tx_simplediscussion_domain_model_comment.comment">
+				<source>Comment</source>
+			</trans-unit>
+			<trans-unit id="tx_simplediscussion_domain_model_comment.reference" resname="tx_simplediscussion_domain_model_comment.reference">
+				<source>Reference</source>
+			</trans-unit>
+			<trans-unit id="tx_simple_discussion_plugin.name" resname="tx_simple_discussion_plugin.name">
+				<source>GMF Simple discussion</source>
+			</trans-unit>
+			<trans-unit id="tx_simple_discussion_plugin.description" resname="tx_simple_discussion_plugin.description">
+				<source>Simple discussion system</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

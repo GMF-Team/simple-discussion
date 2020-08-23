@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3DataStructure>
+    <sheets>
+        <sDEF>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Access</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.allowReply>
+                        <TCEforms>
+                            <label>Allow Reply</label>
+                            <config>
+                                <type>check</type>
+                                <renderType>checkboxToggle</renderType>
+                                <default>0</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0"></numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.allowReply>
+
+                    <settings.autoHide>
+                        <TCEforms>
+                            <label>Automatically hide comments</label>
+                            <config>
+                                <type>check</type>
+                                <renderType>checkboxToggle</renderType>
+                                <default>0</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0"></numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.autoHide>
+                </el>
+            </ROOT>
+        </sDEF>
+        <s_email>
+            <ROOT>
+                <TCEforms>
+                    <sheetTitle>Email</sheetTitle>
+                </TCEforms>
+                <type>array</type>
+                <el>
+                    <settings.noticeEmail>
+                        <TCEforms>
+                            <label>Activate Admin Email</label>
+                            <onChange>reload</onChange>
+                            <config>
+                                <type>check</type>
+                                <renderType>checkboxToggle</renderType>
+                                <default>0</default>
+                                <items type="array">
+                                    <numIndex index="0" type="array">
+                                        <numIndex index="0"></numIndex>
+                                        <numIndex index="1"></numIndex>
+                                    </numIndex>
+                                </items>
+                            </config>
+                        </TCEforms>
+                    </settings.noticeEmail>
+
+                    <settings.emailTo>
+                        <TCEforms>
+                            <label>Email to</label>
+                            <displayCond>FIELD:settings.noticeEmail:REQ:TRUE</displayCond>
+                            <config>
+                                <type>input</type>
+                                <eval>trim, required</eval>
+                            </config>
+                        </TCEforms>
+                    </settings.emailTo>
+
+                    <settings.emailToName>
+                        <TCEforms>
+                            <label>Name for email to</label>
+                            <displayCond>FIELD:settings.noticeEmail:REQ:TRUE</displayCond>
+                            <config>
+                                <type>input</type>
+                                <eval>trim, required</eval>
+                            </config>
+                        </TCEforms>
+                    </settings.emailToName>
+
+                    <settings.emailFrom>
+                        <TCEforms>
+                            <label>Email from</label>
+                            <displayCond>FIELD:settings.noticeEmail:REQ:TRUE</displayCond>
+                            <config>
+                                <type>input</type>
+                                <eval>trim, required</eval>
+                            </config>
+                        </TCEforms>
+                    </settings.emailFrom>
+
+                    <settings.emailFromName>
+                        <TCEforms>
+                            <label>Name for email from</label>
+                            <displayCond>FIELD:settings.noticeEmail:REQ:TRUE</displayCond>
+                            <config>
+                                <type>input</type>
+                                <eval>trim, required</eval>
+                            </config>
+                        </TCEforms>
+                    </settings.emailFromName>
+
+                    <settings.emailSubject>
+                        <TCEforms>
+                            <label>Subject</label>
+                            <displayCond>FIELD:settings.noticeEmail:REQ:TRUE</displayCond>
+                            <config>
+                                <type>input</type>
+                                <eval>trim, required</eval>
+                            </config>
+                        </TCEforms>
+                    </settings.emailSubject>
+                </el>
+            </ROOT>
+        </s_email>
+    </sheets>
+</T3DataStructure>

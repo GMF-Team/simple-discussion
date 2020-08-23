@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:simple_discussion/Resources/Private/Language/locallang" date="2020-08-17T17:41:52Z" product-name="simple_discussion">
+		<header/>
+		<body>
+			<trans-unit id="tx_simplediscussion_domain_model_comment" resname="tx_simplediscussion_domain_model_comment">
+				<source>Comment</source>
+			</trans-unit>
+			<trans-unit id="tx_simplediscussion_domain_model_comment.title" resname="tx_simplediscussion_domain_model_comment.title">
+				<source>Comments</source>
+			</trans-unit>
+			<trans-unit id="tx_simplediscussion_domain_model_comment.name" resname="tx_simplediscussion_domain_model_comment.name">
+				<source>Name</source>
+			</trans-unit>
+			<trans-unit id="tx_simplediscussion_domain_model_comment.nothingfound" resname="tx_simplediscussion_domain_model_comment.nothingfound">
+				<source>Nothing found</source>
+			</trans-unit>
+			<trans-unit id="tx_simplediscussion_domain_model_comment.sourcecomment" resname="tx_simplediscussion_domain_model_comment.sourcecomment">
+				<source>Previous comment:</source>
+			</trans-unit>
+			<trans-unit id="tx_simplediscussion_domain_model_comment.writecomment" resname="tx_simplediscussion_domain_model_comment.writecomment">
+				<source>Write comment now</source>
+			</trans-unit>
+			<trans-unit id="tx_simplediscussion_domain_model_comment.replycomment" resname="tx_simplediscussion_domain_model_comment.replycomment">
+				<source>Reply to this comment</source>
+			</trans-unit>
+			<trans-unit id="tx_simplediscussion_domain_model_comment.anonymous" resname="tx_simplediscussion_domain_model_comment.anonymous">
+				<source>Anonymous</source>
+			</trans-unit>
+			<trans-unit id="tx_simplediscussion_domain_model_comment.updated" resname="tx_simplediscussion_domain_model_comment.updated">
+				<source>Reply created ...</source>
+			</trans-unit>
+			<trans-unit id="tx_simplediscussion_domain_model_comment.updated_autohide" resname="tx_simplediscussion_domain_model_comment.updated">
+				<source>Reply is waiting to be approved  ...</source>
+			</trans-unit>
+			<trans-unit id="tx_simplediscussion_domain_model_comment.created" resname="tx_simplediscussion_domain_model_comment.created">
+				<source>Comment created ...</source>
+			</trans-unit>
+			<trans-unit id="tx_simplediscussion_domain_model_comment.created_autohide" resname="tx_simplediscussion_domain_model_comment.created">
+				<source>Comment is waiting to be approved ...</source>
+			</trans-unit>
+			<trans-unit id="tx_simplediscussion_domain_model_comment.email" resname="tx_simplediscussion_domain_model_comment.email">
+				<source>Email</source>
+			</trans-unit>
+			<trans-unit id="tx_simplediscussion_domain_model_comment.comment" resname="tx_simplediscussion_domain_model_comment.comment">
+				<source>Comment</source>
+			</trans-unit>
+			<trans-unit id="tx_simplediscussion_domain_model_comment.reference" resname="tx_simplediscussion_domain_model_comment.reference">
+				<source>Reference</source>
+			</trans-unit>
+			<trans-unit id="tx_simplediscussion_domain_model_comment.required_char" resname="tx_simplediscussion_domain_model_comment.required_char">
+				<source>¹</source>
+			</trans-unit>
+			<trans-unit id="tx_simplediscussion_domain_model_comment.required_notice" resname="tx_simplediscussion_domain_model_comment.required_notice">
+				<source>Required fields</source>
+			</trans-unit>
+			<trans-unit id="tx_simplediscussion_domain_model_comment.error_honeypot" resname="tx_simplediscussion_domain_model_comment.required_notice">
+				<source>Something went wrong.</source>
+			</trans-unit>
+			<trans-unit id="tx_simplediscussion_domain_model_comment.error_delaytime" resname="tx_simplediscussion_domain_model_comment.required_notice">
+				<source>Too short.</source>
+			</trans-unit>
+			<trans-unit id="tx_simplediscussion_domain_model_comment.error_timeout" resname="tx_simplediscussion_domain_model_comment.required_notice">
+				<source>Timeout.</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
