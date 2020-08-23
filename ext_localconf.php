@@ -13,7 +13,7 @@ call_user_func(
             ],
             // non-cacheable actions
             [
-                \Gmf\SimpleDiscussion\Controller\CommentController::class => 'create, update'
+                \Gmf\SimpleDiscussion\Controller\CommentController::class => 'list, create, edit, update'
             ]
         );
 
