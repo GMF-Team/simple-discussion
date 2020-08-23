@@ -2,9 +2,9 @@
 
 <p> A new comment was created on page {uri} ...</p>
 
-<p><strong>Id</strong>: {comment.uid}</p>
+<p><strong>Uid</strong>: {comment.uid}</p>
 <p><strong>Comment</strong>: {comment.comment}</p>
-<p><strong>Name</strong>: {comment.name}</p>
-<p><strong>E-Mail</strong>: {comment.email}</p>
+<p><strong>Name</strong>: <f:if condition="{comment.name}"><f:then>{comment.name}</f:then><f:else>empty</f:else></f:if></p>
+<p><strong>E-Mail</strong>: <f:if condition="{comment.email}"><f:then>{comment.email}</f:then><f:else>empty</f:else></f:if></p>
 
 <p>This e-mail is automatically generated.</p>
