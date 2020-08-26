@@ -1,10 +1,10 @@
 {
-	"name": "gmf/simple-discussion",
+	"name": "gmfteam/simple-discussion",
 	"type": "typo3-cms-extension",
 	"description": "Simple discussion system ",
 	"authors": [
 		{
-			"name": "Team GMF",
+			"name": "GMF Team",
 			"role": "Developer",
 			"email": "teamonline@gmf-design.de",
 			"homepage": "https://gmf-design.de"
