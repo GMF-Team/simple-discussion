@@ -30,13 +30,13 @@
 			<trans-unit id="tx_simplediscussion_domain_model_comment.updated" resname="tx_simplediscussion_domain_model_comment.updated">
 				<source>Reply created ...</source>
 			</trans-unit>
-			<trans-unit id="tx_simplediscussion_domain_model_comment.updated_autohide" resname="tx_simplediscussion_domain_model_comment.updated">
+			<trans-unit id="tx_simplediscussion_domain_model_comment.updated_autohide" resname="tx_simplediscussion_domain_model_comment.updated_autohide">
 				<source>Reply is waiting to be approved  ...</source>
 			</trans-unit>
 			<trans-unit id="tx_simplediscussion_domain_model_comment.created" resname="tx_simplediscussion_domain_model_comment.created">
 				<source>Comment created ...</source>
 			</trans-unit>
-			<trans-unit id="tx_simplediscussion_domain_model_comment.created_autohide" resname="tx_simplediscussion_domain_model_comment.created">
+			<trans-unit id="tx_simplediscussion_domain_model_comment.created_autohide" resname="tx_simplediscussion_domain_model_comment.created_autohide">
 				<source>Comment is waiting to be approved ...</source>
 			</trans-unit>
 			<trans-unit id="tx_simplediscussion_domain_model_comment.email" resname="tx_simplediscussion_domain_model_comment.email">
@@ -54,14 +54,17 @@
 			<trans-unit id="tx_simplediscussion_domain_model_comment.required_notice" resname="tx_simplediscussion_domain_model_comment.required_notice">
 				<source>Required fields</source>
 			</trans-unit>
-			<trans-unit id="tx_simplediscussion_domain_model_comment.error_honeypot" resname="tx_simplediscussion_domain_model_comment.required_notice">
+			<trans-unit id="tx_simplediscussion_domain_model_comment.error_honeypot" resname="tx_simplediscussion_domain_model_comment.error_honeypot">
 				<source>Something went wrong.</source>
 			</trans-unit>
-			<trans-unit id="tx_simplediscussion_domain_model_comment.error_delaytime" resname="tx_simplediscussion_domain_model_comment.required_notice">
+			<trans-unit id="tx_simplediscussion_domain_model_comment.error_delaytime" resname="tx_simplediscussion_domain_model_comment.error_delaytime">
 				<source>Too short.</source>
 			</trans-unit>
-			<trans-unit id="tx_simplediscussion_domain_model_comment.error_timeout" resname="tx_simplediscussion_domain_model_comment.required_notice">
+			<trans-unit id="tx_simplediscussion_domain_model_comment.error_timeout" resname="tx_simplediscussion_domain_model_comment.error_timeout">
 				<source>Timeout.</source>
+			</trans-unit>
+			<trans-unit id="tx_simplediscussion_domain_model_comment.submit" resname="tx_simplediscussion_domain_model_comment.submit">
+				<source>Create comment</source>
 			</trans-unit>
 		</body>
 	</file>
