@@ -83,6 +83,13 @@ class CommentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 	private $emailFromName = '';
 
 	/**
+	 * If activated: email from name
+	 *
+	 * @var array
+	 */
+	private $commentsRecursive = '';
+
+	/**
 	 * If activated: subject of email
 	 *
 	 * @var string
@@ -242,43 +249,38 @@ class CommentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 			return $flatArray;
 		}
 
-		// process all elements until nohting could be resolved.
-		// then add remaining elements to the root one by one.
-		while (count($flatArray) > 0) {
-			for ($i = count($flatArray) - 1; $i >= 0; $i--) {
-				if ($flatArray[$i]['reference'] === 0) {
-					// root element: set in result and ref!
-					$result[$flatArray[$i]['id']] = $flatArray[$i];
-					$refs[$flatArray[$i]['id']] = &$result[$flatArray[$i]['id']];
-					unset($flatArray[$i]);
-					$flatArray = array_values($flatArray);
-				} else if ($flatArray[$i]['reference'] !== 0) {
-					// no root element. Push to the referenced parent, and add to references as well.
-					if (array_key_exists($flatArray[$i]['reference'], $refs)) {
-						// parent found
-						$o = $flatArray[$i];
-						$refs[$flatArray[$i]['id']] = $o;
-						$refs[$flatArray[$i]['reference']]["children"][$refs[$flatArray[$i]['id']]['id']] = &$refs[$flatArray[$i]['id']];
-						unset($flatArray[$i]);
-						$flatArray = array_values($flatArray);
-					}
-				}
+		$this->commentsRecursive = [];
+		foreach ($flatArray as $entry) {
+			if($entry['reference'] === 0) {
+				$this->commentsRecursive[] = $entry;
+			} else {
+				$this->addCommentToParent($entry);
 			}
 		}
 
-		return $this->sortTreeArray($result);
+		return $this->commentsRecursive;
 	}
 
 	/**
-	 * Sort array
+	 * Reorganize comments recursive
 	 *
-	 * @param array $array
-	 * @return array
+	 * @param [type] $entry
+	 * @param [type] $children
+	 * @return void
 	 */
-	private function sortTreeArray($array)
-	{
-		krsort($array);
-		return $array;
+	private function addCommentToParent($entry, &$children = null) {
+		if($children === null) {
+			$children = &$this->commentsRecursive;
+		}
+
+		foreach($children as &$comment) {
+			if($comment['id'] === $entry['reference']) {
+				$comment['children'][] = $entry;
+				return;
+			} else {
+				$this->addCommentToParent($entry, $comment['children']);
+			}
+		}
 	}
 
 	/**
