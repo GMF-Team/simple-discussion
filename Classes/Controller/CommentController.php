@@ -87,7 +87,7 @@ class CommentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 	 *
 	 * @var array
 	 */
-	private $commentsRecursive = '';
+	private $commentsRecursive = array();
 
 	/**
 	 * If activated: subject of email
@@ -241,20 +241,17 @@ class CommentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 	 */
 	private function unflattenArray($flatArray)
 	{
-		$refs = array();
-		$result = array();
-
 		// If only one item, no need to sort
 		if (count($flatArray) === 1) {
 			return $flatArray;
 		}
 
-		$this->commentsRecursive = [];
-		foreach ($flatArray as $entry) {
-			if($entry['reference'] === 0) {
-				$this->commentsRecursive[] = $entry;
+		// Iterate every comment
+		foreach ($flatArray as $comment) {
+			if($comment['reference'] === 0) {
+				$this->commentsRecursive[] = $comment;
 			} else {
-				$this->addCommentToParent($entry);
+				$this->addCommentToParent($comment, null);
 			}
 		}
 
@@ -264,8 +261,8 @@ class CommentController extends \TYPO3\CMS\Extbase\Mvc\Controller\ActionControll
 	/**
 	 * Reorganize comments recursive
 	 *
-	 * @param [type] $entry
-	 * @param [type] $children
+	 * @param array $entry
+	 * @param array $children
 	 * @return void
 	 */
 	private function addCommentToParent($entry, &$children = null) {
